@@ -48,6 +48,7 @@
             displayResult = new Label();
             powerResult = new Label();
             stringInformativa = new Label();
+            Padroes = new Panel();
             SuspendLayout();
             // 
             // displayMain
@@ -92,6 +93,7 @@
             ButtonSete.TabIndex = 5;
             ButtonSete.Text = "7";
             ButtonSete.UseVisualStyleBackColor = true;
+            ButtonSete.Click += ButtonSete_Click;
             // 
             // ButtonOito
             // 
@@ -101,6 +103,7 @@
             ButtonOito.TabIndex = 6;
             ButtonOito.Text = "8";
             ButtonOito.UseVisualStyleBackColor = true;
+            ButtonOito.Click += ButtonOito_Click;
             // 
             // ButtonNove
             // 
@@ -110,6 +113,7 @@
             ButtonNove.TabIndex = 7;
             ButtonNove.Text = "9";
             ButtonNove.UseVisualStyleBackColor = true;
+            ButtonNove.Click += ButtonNove_Click;
             // 
             // ButtonSeis
             // 
@@ -119,6 +123,7 @@
             ButtonSeis.TabIndex = 8;
             ButtonSeis.Text = "6";
             ButtonSeis.UseVisualStyleBackColor = true;
+            ButtonSeis.Click += ButtonSeis_Click;
             // 
             // ButtonQuatro
             // 
@@ -128,6 +133,7 @@
             ButtonQuatro.TabIndex = 9;
             ButtonQuatro.Text = "4";
             ButtonQuatro.UseVisualStyleBackColor = true;
+            ButtonQuatro.Click += ButtonQuatro_Click;
             // 
             // ButtonCinco
             // 
@@ -137,6 +143,7 @@
             ButtonCinco.TabIndex = 10;
             ButtonCinco.Text = "5";
             ButtonCinco.UseVisualStyleBackColor = true;
+            ButtonCinco.Click += ButtonCinco_Click;
             // 
             // ButtonUm
             // 
@@ -146,6 +153,7 @@
             ButtonUm.TabIndex = 11;
             ButtonUm.Text = "1";
             ButtonUm.UseVisualStyleBackColor = true;
+            ButtonUm.Click += ButtonUm_Click;
             // 
             // ButtonDois
             // 
@@ -155,6 +163,7 @@
             ButtonDois.TabIndex = 12;
             ButtonDois.Text = "2";
             ButtonDois.UseVisualStyleBackColor = true;
+            ButtonDois.Click += ButtonDois_Click;
             // 
             // ButtonTrez
             // 
@@ -164,6 +173,7 @@
             ButtonTrez.TabIndex = 13;
             ButtonTrez.Text = "3";
             ButtonTrez.UseVisualStyleBackColor = true;
+            ButtonTrez.Click += ButtonTrez_Click;
             // 
             // BotaoZero
             // 
@@ -173,6 +183,7 @@
             BotaoZero.TabIndex = 14;
             BotaoZero.Text = "0";
             BotaoZero.UseVisualStyleBackColor = true;
+            BotaoZero.Click += BotaoZero_Click;
             // 
             // pararCancelar
             // 
@@ -227,11 +238,19 @@
             stringInformativa.Size = new Size(0, 15);
             stringInformativa.TabIndex = 20;
             // 
+            // Padroes
+            // 
+            Padroes.Location = new Point(12, 419);
+            Padroes.Name = "Padroes";
+            Padroes.Size = new Size(1117, 194);
+            Padroes.TabIndex = 21;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1141, 531);
+            ClientSize = new Size(1141, 625);
+            Controls.Add(Padroes);
             Controls.Add(stringInformativa);
             Controls.Add(powerResult);
             Controls.Add(displayResult);
@@ -254,6 +273,7 @@
             Controls.Add(displayMain);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -280,5 +300,6 @@
         private Label displayResult;
         private Label powerResult;
         private Label stringInformativa;
+        private Panel Padroes;
     }
 }
