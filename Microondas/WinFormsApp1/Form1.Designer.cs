@@ -49,6 +49,9 @@
             powerResult = new Label();
             stringInformativa = new Label();
             Padroes = new Panel();
+            label2 = new Label();
+            CadastraNovo = new Button();
+            panelCustom = new Panel();
             SuspendLayout();
             // 
             // displayMain
@@ -245,11 +248,40 @@
             Padroes.Size = new Size(1117, 194);
             Padroes.TabIndex = 21;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(252, 112);
+            label2.Name = "label2";
+            label2.Size = new Size(142, 15);
+            label2.TabIndex = 22;
+            label2.Text = "Cadastrar novo Programa";
+            // 
+            // CadastraNovo
+            // 
+            CadastraNovo.Location = new Point(252, 141);
+            CadastraNovo.Name = "CadastraNovo";
+            CadastraNovo.Size = new Size(142, 23);
+            CadastraNovo.TabIndex = 23;
+            CadastraNovo.Text = "CadastraNovo";
+            CadastraNovo.UseVisualStyleBackColor = true;
+            CadastraNovo.Click += CadastraNovo_Click;
+            // 
+            // panelCustom
+            // 
+            panelCustom.Location = new Point(208, 265);
+            panelCustom.Name = "panelCustom";
+            panelCustom.Size = new Size(921, 148);
+            panelCustom.TabIndex = 0;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1141, 625);
+            Controls.Add(panelCustom);
+            Controls.Add(CadastraNovo);
+            Controls.Add(label2);
             Controls.Add(Padroes);
             Controls.Add(stringInformativa);
             Controls.Add(powerResult);
@@ -301,5 +333,8 @@
         private Label powerResult;
         private Label stringInformativa;
         private Panel Padroes;
+        private Label label2;
+        private Button CadastraNovo;
+        private Panel panelCustom;
     }
 }

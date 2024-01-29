@@ -313,6 +313,7 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             CriarBotoesProgramas();
+            criaBotoesCustom();
         }
 
         private void botaoPrograma_Click(object sender, EventArgs e)
@@ -334,6 +335,36 @@ namespace WinFormsApp1
                 }
             }
 
+        }
+
+        private void CadastraNovo_Click(object sender, EventArgs e)
+        {
+            Form2 abrirForm = new Form2();
+            abrirForm.ShowDialog();
+        }
+
+        public void criaBotoesCustom()
+        {
+            Form2 salvos = new Form2();
+
+            List<ProgramasPadroes> novosBotoes = salvos.listarTodos(Form2.caminho);
+            CriarBotoesCustom(novosBotoes);
+        }
+
+        private void CriarBotoesCustom(List<ProgramasPadroes> novosBotoes)
+        {
+            foreach (var programa in novosBotoes)
+            {
+                Button novoBotao = new Button();
+                novoBotao.Text = $"{programa.Nome}\n potencia:{programa.Potencia}\nTempo {programa.Tempo}\n\n{programa.Instrucoes}";
+                novoBotao.Tag = programa;
+                novoBotao.Dock = DockStyle.Right;
+                novoBotao.Font = new Font(novoBotao.Font,FontStyle.Italic);
+                novoBotao.Size = new Size(120, 80);
+                novoBotao.Click += botaoPrograma_Click;
+
+                panelCustom.Controls.Add(novoBotao);
+            }
         }
     }
 }
